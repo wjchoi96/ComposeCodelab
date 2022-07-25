@@ -45,13 +45,13 @@ class StudyActivity : ComponentActivity() {
             }
         }
     }
+}
 
-    @Preview(showBackground = true)
-    @Composable
-    fun StudyPreview() {
-        ComposePracticeTheme {
-            LoginView()
-        }
+@Preview(showBackground = true)
+@Composable
+fun StudyPreview() {
+    ComposePracticeTheme {
+        LoginView()
     }
 }
 
