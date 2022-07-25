@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ComposePractice</string>
+
+    <string name="show_less">Show Less</string>
+    <string name="show_more">Show More</string>
+    <string name="content">Jetpack Compose is a modern declarative UI Toolkit for Android. Compose makes it easier to write and maintain your app UI by providing a declarative API that allows you to render your app UI without imperatively mutating frontend views. This terminology needs some explanation, but the implications are important for your app design</string>
 </resources>
