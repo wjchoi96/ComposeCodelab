@@ -1,8 +1,11 @@
-# ComposePractice
+# ComposeCodelab
 
 
-### Jetpack Compse Codelab 학습
+### Jetpack Compse Codelab Pathways
 https://developer.android.com/courses/pathways/compose 
 
-### sample code 저장소
+### Jetpack Compose course
+https://developer.android.com/courses/jetpack-compose/course
+
+### Codelabs Repository
 https://github.com/googlecodelabs/android-compose-codelabs 
