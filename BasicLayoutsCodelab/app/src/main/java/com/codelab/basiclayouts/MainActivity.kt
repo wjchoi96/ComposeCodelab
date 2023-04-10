@@ -122,15 +122,15 @@ fun FavoriteCollectionCard(
                 painter = painterResource(id = drawable),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                modifier = modifier
-                    .size(56.dp)
+                modifier = Modifier
+                    .size(70.dp)
                     .clip(RoundedCornerShape(4.dp))
             )
 
             Text(
                 text = stringResource(id = text),
                 style = MaterialTheme.typography.h3,
-                modifier = Modifier.padding(horizontal = 16.dp)
+                modifier = Modifier.padding(horizontal = 12.dp)
             )
         }
         
@@ -297,7 +297,7 @@ fun AlignYourBodyElementPreview() {
 fun FavoriteCollectionCardPreview() {
     MySootheTheme {
         FavoriteCollectionCard(
-            modifier = Modifier.padding(2.dp),
+            modifier = Modifier.padding(0.dp),
             drawable = R.drawable.fc2_nature_meditations,
             text = R.string.fc2_nature_meditations
         )
