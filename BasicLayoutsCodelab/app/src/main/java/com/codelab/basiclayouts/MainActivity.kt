@@ -204,8 +204,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             .verticalScroll(rememberScrollState())
             .padding(vertical = 16.dp)
     ) {
-        Spacer(modifier = modifier.height(16.dp))
-        SearchBar(modifier = modifier.padding(16.dp))
+        Spacer(modifier = Modifier.height(16.dp))
+        SearchBar(modifier = Modifier.padding(horizontal = 16.dp))
         HomeSection(title = R.string.align_your_body) {
             AlignYourBodyRow(bodyList = alignYourBodyData.map{ it.drawable to it.text })
         }
