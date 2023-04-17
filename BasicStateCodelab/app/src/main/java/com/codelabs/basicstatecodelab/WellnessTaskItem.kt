@@ -8,35 +8,12 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.codelabs.basicstatecodelab.ui.theme.BasicStateCodelabTheme
-
-data class WellnessTask(
-    val id: Int,
-    val label: String
-)
-
-@Composable
-fun WellnessTaskItem(
-    taskName: String,
-    onCloseTask: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    var checkedState by rememberSaveable { mutableStateOf(false) }
-
-    WellnessTaskItem(
-        modifier = modifier,
-        taskName = taskName,
-        onClose = onCloseTask,
-        isChecked = checkedState,
-        checkChanged = { newState -> checkedState = newState }
-    )
-}
 
 @Composable
 fun WellnessTaskItem(
@@ -44,7 +21,7 @@ fun WellnessTaskItem(
     taskName: String,
     onClose: () -> Unit,
     isChecked: Boolean,
-    checkChanged: (Boolean) -> Unit,
+    onCheckedChange: (Boolean) -> Unit,
 ) {
     Row(
         modifier = modifier,
@@ -58,7 +35,7 @@ fun WellnessTaskItem(
         )
         Checkbox(
             checked = isChecked,
-            onCheckedChange = checkChanged
+            onCheckedChange = onCheckedChange
         )
         IconButton(
             onClick = onClose,
@@ -80,7 +57,7 @@ fun WellnessTaskItemPreview() {
             taskName = "task name",
             onClose = {},
             isChecked = true,
-            checkChanged = {}
+            onCheckedChange = {}
         )
     }
 }

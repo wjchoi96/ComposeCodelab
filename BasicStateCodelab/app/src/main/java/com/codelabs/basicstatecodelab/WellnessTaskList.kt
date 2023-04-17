@@ -13,6 +13,7 @@ private fun getWellnessTasks() = List(30) { i -> WellnessTask(i, "Task # $i") }
 @Composable
 fun WellnessTaskList(
     modifier: Modifier = Modifier,
+    onCheckChanged: (WellnessTask, Boolean) -> Unit,
     onCloseTask: (WellnessTask) -> Unit,
     list: List<WellnessTask> = remember { getWellnessTasks() }
 ) {
@@ -25,7 +26,9 @@ fun WellnessTaskList(
         ) {
             WellnessTaskItem(
                 taskName = it.label,
-                onCloseTask = { onCloseTask(it) }
+                isChecked = it.isChecked,
+                onCheckedChange = { isCheck -> onCheckChanged(it, isCheck) },
+                onClose = { onCloseTask(it) }
             )
         }
     }
@@ -37,6 +40,7 @@ fun WellnessTaskListPreview() {
     BasicStateCodelabTheme {
         WellnessTaskList(
             onCloseTask = {},
+            onCheckChanged = { _, _ -> },
             list = getWellnessTasks()
         )
     }
