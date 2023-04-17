@@ -26,7 +26,7 @@ fun WellnessScreen(modifier: Modifier = Modifier) {
 @Composable
 fun WellnessScreenPreview() {
     BasicStateCodelabTheme {
-        StatefulCounter()
+        WellnessScreen()
     }
 }
 
